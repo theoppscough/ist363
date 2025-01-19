@@ -1,0 +1,14 @@
+/*.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+p {
+    text-align: justify;
+}
+*/
+.outside {
+    border: 20px #E38E49;
+    background-color: #D4EBF8;
+    color: #0A3981
+}
