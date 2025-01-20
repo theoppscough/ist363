@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Layout</title>
+    <style>
+        /* Body styles */
+        body {
+            margin: 0; /* Remove default margins */
+            font-family: Arial, sans-serif; /* Set a clean font */
+            background-color: #d3eafd; /* Light blue background */
+            display: flex;
+            justify-content: center; /* Center content horizontally */
+            align-items: center; /* Center content vertically */
+            min-height: 100vh; /* Ensure the body fills the full viewport height */
+        }
+
+        /* Outer container with orange borders */
+        .outside {
+            background-color: white; /* White background for the content */
+            border-radius: 15px; /* Rounded corners for the content */
+            border-left: 20px solid orange; /* Orange border on the left */
+            border-right: 20px solid orange; /* Orange border on the right */
+            max-width: 900px; /* Limit the width of the content block */
+            padding: 20px; /* Space inside the block */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+        }
+
+        /* Content styling */
+        h1 {
+            text-align: center; /* Center the heading */
+            color: #003366; /* Dark blue color */
+            margin-bottom: 20px; /* Space below the heading */
+        }
+
+        p {
+            line-height: 1.6; /* Improve readability with line spacing */
+        }
+
+        .images {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Two columns for images */
+            gap: 15px; /* Spacing between the images */
+            margin-top: 20px; /* Space above the image section */
+        }
+
+        .images img {
+            width: 100%; /* Make images responsive */
+            border-radius: 10px; /* Rounded corners for images */
+        }
+    </style>
+</head>
+<body>
+    <div class="outside">
+        <h1>Laurie Ferger</h1>
+        <p>
+            Something <span style="color: orange;">personal</span> is that I have a rescue dog named Libby who doesn’t like to go out in the rain. 
+            <span style="color: orange;">Professionally</span>, I used to program software for fashion designers but I left that job to develop websites. 
+            And something <span style="color: orange;">peculiar</span> is I love the smell of dog’s paws!
+        </p>
+        <div class="images">
+            <img src="images/me.tiff" alt="Dog Image 1">
+            <img src="images/espanol.png" alt="Dog Image 2">
+            <img src="images/hartford.png" alt="Fashion Designers">
+            <img src="images/madrid.png" alt="Dog Paws">
+        </div>
+    </div>
+</body>
+</html>
