@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Activity 2</title>
+    <style>
+        .circle {
+            transition: 1s;
+            border-radius: 100px;
+            background-color: orange;
+            padding: 50px;
+            width: 100px;
+            height: 100px;
+            text-align: center; /* centering the text inside */
+            margin: 0 auto /* centers the whole circle */
+        }
+
+        .circle:hover {
+            background-color: grey;
+            transform: rotate(360deg);
+        }
+
+        .otto {
+            position: absolute;
+            left: -50px;
+            animation: otto;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes otto {
+            from { transform: translate(-200px);}
+            to { transform: translateX(800px);}
+        }
+    </style>
+</head>
+<body>
+    <div class="circle">
+        <div>
+            <p>Go Orange!</p>
+        </div>
+    </div>
+    <div class="otto">
+        <img src="otto-on-skateboard.png" alt="otto">
+    </div>
+    
+</body>
+</html>
