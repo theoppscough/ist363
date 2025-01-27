@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 02</title>
+    <style>
+        .submit {
+            height: 40px;
+            width: 90px;
+            border-radius: 20px;
+            border: 2px solid orange;
+            /*
+            transition: width 0.1s, height 0.1s, transform 0.1s;
+            transition-timing-function: linear;
+            /*<!-- below is .submit p CSS-->*/
+            text-align: center;
+            vertical-align: middle;
+            line-height: 40px;
+            font-family: Arial;
+            color: orange; 
+        } 
+
+        .submit:hover {
+            color: white;
+            background-color: orange;
+            width: 93px;
+            height: 43px;
+            transform: scale(1.15);
+        }
+
+        .submit:active{
+            background-color: #009933;
+            content: "";
+            position: absolute;
+            border-color: #009933;
+            border-style: 0 0.3em 0.25em 0;
+            height: 1em;
+            top: 1.3em;
+            left: 0.6em;
+            margin-top: -1em;
+            transform: rotate(45deg);
+            width: 0.5em;
+        }
+
+        /*.submit p:active:before {
+            content: "";
+            position: absolute;
+            border-color: #009933;
+            border-style: 0 0.3em 0.25em 0;
+            height: 1em;
+            top: 1.3em;
+            left: 0.6em;
+            margin-top: -1em;
+            transform: rotate(45deg);
+            width: 0.5em;
+        }*/
+    </style>
+</head>
+<body>
+    <button class="submit">Submit</button>
+    <div class="submit">
+        Submit
+    </div>
+</body>
+</html>
