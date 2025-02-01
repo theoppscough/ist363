@@ -1,0 +1,30 @@
+@import "reset";
+
+$heading_color: #00ff00;
+$main_font: Arial, Helevtica, sans-serif;
+
+h1 {
+    color: $heading_color;
+}
+
+@mixin warning {
+    box-shadow: red;
+    background-color: lime;
+}
+
+.danger {
+    @include warning;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* extend */
+.jumbotron {
+    width: 100%;
+    background-color: lightblue;
+    border: 2px solid navy;
+}
+
+.bigheading_about {
+    @extend .jumbotron;
+    color: #333333;
+}
