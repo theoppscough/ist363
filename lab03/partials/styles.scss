@@ -19,15 +19,20 @@
     background-color: $orange;
     color: white;
     padding: 20px;
+
+    h1 {
+      font-family: sans-serif;
+      font-size: 20px;
+    }
   }
   
   nav {
-    margin-top: 10px;
+    margin-top: 25px;
     a {
       margin: 0 15px;
       color: white;
       text-decoration: none;
-      font-size: 18px;
+      font-size: 14px;
     }
   }
   
@@ -40,17 +45,18 @@
   
   /* SECTION TITLES */
   .section-title {
-    font-size: 22px;
+    font-size: 18px;
     font-weight: bold;
     color: $melon;
     margin-bottom: 15px;
+    margin-top: 15px;
   }
   
   /* GRID SYSTEM */
   .recipe-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
   }
   
   /* RECIPE CARDS */
@@ -104,7 +110,16 @@
   .about {
     @include simple;
     margin: 40px 0;
-  
+    h2 {
+      font-size: 18px;
+      color: $melon;
+      margin: 15px;
+    }
+
+    p {
+      padding-bottom: 20px;
+    }
+
     img {
       width: 100%;
       border-radius: 8px;
@@ -127,11 +142,17 @@
     background: $mint;
     padding: 15px;
     margin-top: 30px;
-  
+    color: white;
+
+    p {
+      padding-top: 15px;
+        padding-bottom: 10px;
+    }
+    
     a {
         text-decoration: none;
         margin: 0 10px;
-        color: #333;
+        color: white;
     }
   }
   
