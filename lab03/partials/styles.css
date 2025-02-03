@@ -1,0 +1,254 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f8f8f8;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  background-color: #e89b6a;
+  color: white;
+  padding: 20px;
+}
+
+nav {
+  margin-top: 10px;
+}
+nav a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* CONTAINER */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* SECTION TITLES */
+.section-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #e2625c;
+  margin-bottom: 15px;
+}
+
+/* GRID SYSTEM */
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* RECIPE CARDS */
+.recipe-card {
+  text-align: center;
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.recipe-card img {
+  width: 100%;
+  border-radius: 8px;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* NEWSLETTER SECTION */
+.newsletter {
+  text-align: center;
+  background: #e4fdc3;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 30px 0;
+}
+.newsletter img {
+  width: 60px;
+  margin-bottom: 10px;
+}
+.newsletter input {
+  padding: 10px;
+  width: 250px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.newsletter button {
+  padding: 10px 15px;
+  background: #e89b6a;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* ABOUT US SECTION */
+.about {
+  text-align: center;
+  margin: 40px 0;
+}
+.about img {
+  width: 100%;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+.about button {
+  padding: 10px 15px;
+  background: #e89b6a;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  background: #8ae2c8;
+  padding: 15px;
+  margin-top: 30px;
+}
+footer a {
+  text-decoration: none;
+  margin: 0 10px;
+  color: #333;
+}
+
+/* MEDIA QUERIES for Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  .recipe-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .newsletter input {
+    width: 80%;
+    margin-bottom: 10px;
+  }
+  .newsletter button {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .recipe-grid {
+    grid-template-columns: 1fr;
+  }
+  .container {
+    width: 95%;
+  }
+  .newsletter input,
+  button {
+    width: 100%;
+  }
+}/*# sourceMappingURL=styles.css.map */

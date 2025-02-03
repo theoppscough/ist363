@@ -1,0 +1,135 @@
+@import 'variables';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  }
+  
+  body {
+  background-color: #f8f8f8;
+  }
+  
+  /* HEADER */
+  header {
+  background-color: orange;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  }
+  
+  nav {
+  margin-top: 10px;
+  }
+  
+  nav a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  }
+  
+  /* CONTAINER */
+  .container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0px auto;
+  }
+  
+  /* SECTION TITLES */
+  .section-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #b23b3b;
+  margin-bottom: 15px;
+  }
+  
+  /* GRID SYSTEM */
+  .recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  }
+  
+  /* RECIPE CARDS */
+  .recipe-card {
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .recipe-card img {
+  width: 100%;
+  border-radius: 8px;
+  height: 150px;
+  object-fit: cover;
+  }
+  
+  /* NEWSLETTER SECTION */
+  .newsletter {
+  background: #e6f7c9;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin: 30px 0;
+  }
+  
+  .newsletter img {
+  width: 60px;
+  margin-bottom: 10px;
+  }
+  
+  .newsletter input {
+  padding: 10px;
+  width: 250px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  }
+  
+  .newsletter button {
+  padding: 10px 15px;
+  background: #d2956a;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  }
+  
+  /* ABOUT US SECTION */
+  .about {
+  text-align: center;
+  margin: 40px 0;
+  }
+  
+  .about img {
+  width: 100%;
+  border-radius: 8px;
+  margin: 20px 0;
+  }
+  
+  .about button {
+  padding: 10px 15px;
+  background: #d2956a;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  }
+  
+  /* FOOTER */
+  footer {
+  background: #a6d4b3;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+  }
+  
+  footer a {
+  text-decoration: none;
+  margin: 0 10px;
+  color: #333;
+  }

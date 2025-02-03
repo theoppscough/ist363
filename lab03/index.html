@@ -3,27 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab03</title>
-    <style>
-        nav {
-            text-align: center;
-            background-color: orange;
-            padding-top: 50px;
-            padding-bottom: 10px;
-            
-        }
-        nav a {
-            text-decoration: none;
-        }
-    </style>
+    <title>Recipe Blog</title>
+    <link rel="stylesheet" href="../lab03/partials/styles.css">
 </head>
 <body>
-    
-    <nav>
-        <a href="/.../">Home</a>
-        <a href="/.../">Recipes</a>
-        <a href="/.../">About</a>
-        <a href="/.../">Contact</a>
-    </nav>
+
+    <!-- HEADER -->
+    <header>
+        <h1>Recipe Blog</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Recipes</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        
+        <!-- LATEST RECIPES -->
+        <section>
+            <h2 class="section-title">Latest Recipes</h2>
+            <div class="recipe-grid">
+                <div class="recipe-card">
+                    <img src="../lab03/images/burger.jpg" alt="Burger">
+                    <p><strong>Burger</strong></p>
+                </div>
+                <div class="recipe-card">
+                    <img src="../lab03/images/pancakes.jpg" alt="Pancakes">
+                    <p><strong>Pancakes</strong></p>
+                </div>
+                <div class="recipe-card">
+                    <img src="../lab03/images/pasta.jpg" alt="Pasta">
+                    <p><strong>Pasta</strong></p>
+                </div>
+                <div class="recipe-card">
+                    <img src="../lab03/images/curry.jpg" alt="Curry">
+                    <p><strong>Curry</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEWSLETTER -->
+        <section class="newsletter">
+            <img src="../lab03/images/newsletter.png" alt="Newsletter">
+            <p>Sign up for our newsletter to get the latest recipes directly to your inbox!</p>
+            <input type="email" placeholder="Your Email">
+            <button>Subscribe</button>
+        </section>
+
+        <!-- ABOUT US -->
+        <section class="about">
+            <img src="../lab03/images/about.jpg" alt="Chefs Cooking">
+            <h2>About Us</h2>
+            <p>Learn more about our journey and passion for cooking.</p>
+            <button>Learn More</button>
+        </section>
+
+        <!-- OLDER RECIPES -->
+        <section>
+            <h2 class="section-title">Older Recipes</h2>
+            <div class="recipe-grid">
+                <div class="recipe-card">
+                    <img src="../lab03/images/salad.jpg" alt="Salad">
+                    <p><strong>Salad</strong></p>
+                </div>
+                <div class="recipe-card">
+                    <img src="../lab03/images/chops.jpg" alt="Chops">
+                    <p><strong>Chops</strong></p>
+                </div>
+                <div class="recipe-card">
+                    <img src="../lab03/images/fruit.jpg" alt="Fruit">
+                    <p><strong>Fruit</strong></p>
+                </div>
+                <div class="recipe-card">
+                    <img src="../lab03/images/cake.jpg" alt="Cake">
+                    <p><strong>Cake</strong></p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2025 Recipe Blog. All rights reserved.</p>
+        <p>
+            <a href="#">Facebook</a> |
+            <a href="#">Bluesky</a> |
+            <a href="#">Instagram</a> |
+            <a href="#">Privacy Policy</a>
+        </p>
+    </footer>
+
 </body>
 </html>
