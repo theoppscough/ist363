@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+// Questiom 1   
+let favNumber = 8;
+console.log("My favorite number is " + favNumber)   
+
+//Question 2
+let favoriteFoods = ["Pizza","Toast","Corn","Apple"]
+console.log(favoriteFoods[1])
+
+console.log(favoriteFoods.push("Bananas"))
+
+console.log(favoriteFoods)
+
+// Question 3
+for (let i = 0; i < favoriteFoods.length; i++) {
+    console.log("Favorite Food " + (i+1) + ": " + favoriteFoods[i])
+}
+
+//Question 4
+for (let i = 0; i < favoriteFoods.length; i++) {
+    if (i !== 1) {
+        console.log("Favorite Food " + (i+1) + ": " + favoriteFoods[i])
+    }
+}
+
+//Question 5
+
+let book = {
+    title: "Looking For Alaska",
+    author: "John Green",
+    yearPublished: 2005,
+    isAvailble: true
+}
+
+console.log(book["title"])
+console.log(book["author"])
+if (book["isAvailble"] == true) {
+    console.log("This book is availble for checkout")
+} else {
+    console.log("Sorry, this book is currently checked out.")
+}
+
+// Question 6
+let x = 1;
+
+while (x < 21) {
+    if (x % 2 == 0){
+        console.log(x)
+        x++;
+    } else {
+        x++
+    }
+}
+
+
+//Question 7
+let randomNumber = Math.floor(Math.random() * 6) + 1;
+console.log(randomNumber)
+
+</script>
+
+</body>
+</html>
