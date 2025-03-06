@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Examples</title>>
+</head>
+<body>
+
+    <p id="pone" class="odd">one</p>
+    <p class="even">two</p>
+    <p class="odd">three</p>
+
+    <form id="myForm">
+        <input type="text" name="fname" value="Kevin">
+        <input type="text" name="lname" value="Ochoa">
+        <input type="submit" value="send form">
+    </form>
+
+    <p>
+    <button id="myButton">Sign Up</button>
+    </p>
+
+    <form id="yearForm">
+        <input type="text" name="dogYears" value="7">
+        <input type="submit" value="Calculate">
+    </form>
+
+    <script>
+
+        let years =  document.getElementById("yearForm").elements[0].value;
+
+        function dogYears() {
+            let humanYears = document.forms['yearForm'].elements.value;
+            let dogAge = humanYears * 7;
+            document.getElementById()
+            return years * 7
+        }
+        //console.log(dogYears);
+
+        console.log('Below is Dog Years in Human Years')
+
+        document.getElementById("yearForm").elements[0].value = dogYears(years);
+
+        document.getElementById('yearForm').addEventListener("click", dogYears);
+        console.log(document.getElementById("yearForm").elements[0].value);
+
+
+
+
+        // pick something by id and console loggin
+        let picked = document.getElementById('pone');
+        console.log(picked);
+
+        // pick by class and tag => returns array
+        let oddTags = document.getElementsByClassName('odd')
+        for (i = 0; i < oddTags.length; i++) {
+            console.log(oddTags[i]);
+        }
+
+        console.log('Below is the log by the tag name')
+        let pTags = document.getElementsByTagName('p')
+        for (i = 0; i < pTags.length; i++) {
+            console.log(oddTags[i]);
+        }
+
+        //gettting element value from a form
+        console.log(document.getElementById("myForm").elements[0].value);
+
+        //changing text and HTML in tags
+        document.getElementById('pone').innerHTML = 'four';
+        //change form value
+        document.getElementById("myForm").elements[0].value = "Daniel";
+        //change a style
+        document.getElementById("pone").style.color = "orange";
+        document.getElementById("pone").style.textDecoration = "underline";
+        document.getElementsByTagName("body")[0].style.backgroundColor = "red";
+
+        document.getElementById('myButton').addEventListener("click", myFunction);
+
+        function myFunction () {
+            alert("Hello");
+        }
+    </script>
+
+</body>
+</html>
