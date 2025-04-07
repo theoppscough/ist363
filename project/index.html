@@ -1,11 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Music Match</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1 class="text-primary">Hello World</h1>
+  <header>
+    <h1>Music Match</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="search">
+      <input type="text" id="genreInput" placeholder="Enter a genre (e.g. pop, jazz)" />
+      <button onclick="getRecommendations()">Get Songs</button>
+    </section>
+
+    <section id="results"></section>
+  </main>
+
+  <footer>
+    <p>Kevin Ochoa | IST 363 Project 2 | Spring 2025</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
