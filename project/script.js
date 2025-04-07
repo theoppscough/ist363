@@ -1,6 +1,6 @@
-const geniusAccessToken = 'A2QMDTC80nZDL6_nsOVG2rTw5WrnDVu9kCcAy4Wuswh8FN7KpQn_rIH3l8T3wg4m'; // your Genius access token
+const geniusAccessToken = 'A2QMDTC80nZDL6_nsOVG2rTw5WrnDVu9kCcAy4Wuswh8FN7KpQn_rIH3l8T3wg4m';
 
-// New function: Get songs from Deezer by keyword (genre or artist)
+// Get songs from Deezer
 async function getDeezerSongs() {
   const query = document.getElementById('genreInput').value.trim();
   const resultsContainer = document.getElementById('results');
@@ -14,14 +14,12 @@ async function getDeezerSongs() {
   try {
     const response = await fetch(`https://api.deezer.com/search?q=${query}&limit=5`);
     const data = await response.json();
-
     const tracks = data.data;
 
     for (const track of tracks) {
       const title = track.title;
       const artist = track.artist.name;
       const image = track.album.cover_medium;
-
       const geniusLink = await searchGenius(title, artist);
 
       resultsContainer.innerHTML += `
@@ -39,7 +37,7 @@ async function getDeezerSongs() {
   }
 }
 
-// Genius Lyrics Search (same as before, just with CORS proxy)
+// Genius Lyrics Search
 async function searchGenius(title, artist) {
   const query = encodeURIComponent(`${title} ${artist}`);
   const response = await fetch(`https://corsproxy.io/?https://api.genius.com/search?q=${query}`, {
@@ -54,4 +52,5 @@ async function searchGenius(title, artist) {
   }
 }
 
+// Expose function globally so button can use it
 window.getDeezerSongs = getDeezerSongs;
