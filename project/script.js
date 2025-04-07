@@ -53,3 +53,5 @@ async function searchGenius(title, artist) {
     return '#';
   }
 }
+
+window.getDeezerSongs = getDeezerSongs;
