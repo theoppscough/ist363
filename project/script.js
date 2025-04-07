@@ -12,7 +12,7 @@ async function getDeezerSongs() {
   }
 
   try {
-    const response = await fetch(`https://api.deezer.com/search?q=${query}&limit=5`);
+    const response = await fetch(`https://corsproxy.io/?https://api.deezer.com/search?q=${query}&limit=5`);
     const data = await response.json();
     const tracks = data.data;
 
