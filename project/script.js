@@ -1,47 +1,26 @@
-const spotifyClientId = 'c5baaed4ac174ccf99460db9dc24b597';
-const spotifyClientSecret = '69f256225b804b1ba67c010fbf68103f';
-const geniusAccessToken = 'A2QMDTC80nZDL6_nsOVG2rTw5WrnDVu9kCcAy4Wuswh8FN7KpQn_rIH3l8T3wg4m';
+const geniusAccessToken = 'A2QMDTC80nZDL6_nsOVG2rTw5WrnDVu9kCcAy4Wuswh8FN7KpQn_rIH3l8T3wg4m'; // your Genius access token
 
-// Get Spotify Token
-async function getSpotifyToken() {
-  const result = await fetch('https://accounts.spotify.com/api/token', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/x-www-form-urlencoded',
-      'Authorization': 'Basic ' + btoa(`${spotifyClientId}:${spotifyClientSecret}`)
-    },
-    body: 'grant_type=client_credentials'
-  });
-
-  const data = await result.json();
-  return data.access_token;
-}
-
-// Get Recommendations
-async function getRecommendations() {
-  const genre = document.getElementById('genreInput').value.trim();
+// New function: Get songs from Deezer by keyword (genre or artist)
+async function getDeezerSongs() {
+  const query = document.getElementById('genreInput').value.trim();
   const resultsContainer = document.getElementById('results');
   resultsContainer.innerHTML = '';
 
-  if (!genre) {
-    alert('Please enter a genre!');
+  if (!query) {
+    alert('Please enter a genre or keyword!');
     return;
   }
 
   try {
-    const token = await getSpotifyToken();
-
-    const response = await fetch(`https://api.spotify.com/v1/recommendations?seed_genres=${genre}&limit=5`, {
-      headers: { 'Authorization': 'Bearer ' + token }
-    });
-
+    const response = await fetch(`https://api.deezer.com/search?q=${query}&limit=5`);
     const data = await response.json();
-    const tracks = data.tracks;
+
+    const tracks = data.data;
 
     for (const track of tracks) {
-      const title = track.name;
-      const artist = track.artists[0].name;
-      const image = track.album.images[1].url;
+      const title = track.title;
+      const artist = track.artist.name;
+      const image = track.album.cover_medium;
 
       const geniusLink = await searchGenius(title, artist);
 
@@ -55,15 +34,15 @@ async function getRecommendations() {
       `;
     }
   } catch (error) {
-    console.error('Error:', error);
+    console.error('Deezer Error:', error);
     alert('Something went wrong!');
   }
 }
 
-// Genius Lyrics Search
+// Genius Lyrics Search (same as before, just with CORS proxy)
 async function searchGenius(title, artist) {
   const query = encodeURIComponent(`${title} ${artist}`);
-  const response = await fetch(`https://api.genius.com/search?q=${query}`, {
+  const response = await fetch(`https://corsproxy.io/?https://api.genius.com/search?q=${query}`, {
     headers: { Authorization: `Bearer ${geniusAccessToken}` }
   });
 
