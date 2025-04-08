@@ -40,7 +40,7 @@ async function getDeezerSongs() {
 // Genius Lyrics Search
 async function searchGenius(title, artist) {
   const query = encodeURIComponent(`${title} ${artist}`);
-  const response = await fetch(`https://corsproxy.io/?https://api.genius.com/search?q=${query}`, {
+  const response = await fetch(`https://api.codetabs.com/v1/proxy?quest=https://api.genius.com/search?q=${query}`, {
     headers: { Authorization: `Bearer ${geniusAccessToken}` }
   });
 
