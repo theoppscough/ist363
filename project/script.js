@@ -20,16 +20,16 @@ async function getDeezerSongs() {
       const title = track.title;
       const artist = track.artist.name;
       const image = track.album.cover_medium;
-      const geniusLink = await searchGenius(title, artist);
+      const lyrics = await searchLyrics(title, artist);
 
       resultsContainer.innerHTML += `
-        <div class="song-card">
+      <div class="song-card">
           <img src="${image}" alt="${title}" width="100%" />
           <h3>${title}</h3>
           <p>${artist}</p>
-          <a href="${geniusLink}" target="_blank">View Lyrics</a>
-        </div>
-      `;
+          <pre style="white-space: pre-wrap; max-height: 200px; overflow-y: auto;">${lyrics}</pre>
+      </div>
+    `;
     }
   } catch (error) {
     console.error('Deezer Error:', error);
@@ -38,19 +38,17 @@ async function getDeezerSongs() {
 }
 
 // Genius Lyrics Search
-async function searchGenius(title, artist) {
-  const query = encodeURIComponent(`${title} ${artist}`);
-  const response = await fetch(`https://api.codetabs.com/v1/proxy?quest=https://api.genius.com/search?q=${query}`, {
-    headers: { Authorization: `Bearer ${geniusAccessToken}` }
-  });
-
-  const data = await response.json();
-  if (data.response.hits.length > 0) {
-    return data.response.hits[0].result.url;
-  } else {
-    return '#';
+async function searchLyrics(title, artist) {
+    try {
+      const response = await fetch(`https://api.lyrics.ovh/v1/${encodeURIComponent(artist)}/${encodeURIComponent(title)}`);
+      const data = await response.json();
+      return data.lyrics || 'Lyrics not found.';
+    } catch (error) {
+      console.error('Lyrics Error:', error);
+      return 'Lyrics not available.';
+    }
   }
-}
+  
 
 // Expose function globally so button can use it
 window.getDeezerSongs = getDeezerSongs;
