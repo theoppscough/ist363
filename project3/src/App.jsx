@@ -1,37 +1,20 @@
-import Login from "./components/auth/login";
-import Register from "./components/auth/register";
-
-import Header from "./components/header";
-import Home from "./components/home";
-
-import { AuthProvider } from "./contexts/authContext";
-import { useRoutes } from "react-router-dom";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Log from './pages/Log';
+import Progress from './pages/Progress';
+import Navbar from './components/Navbar';
 
 function App() {
-  const routesArray = [
-    {
-      path: "*",
-      element: <Login />,
-    },
-    {
-      path: "/login",
-      element: <Login />,
-    },
-    {
-      path: "/register",
-      element: <Register />,
-    },
-    {
-      path: "/home",
-      element: <Home />,
-    },
-  ];
-  let routesElement = useRoutes(routesArray);
   return (
-    <AuthProvider>
-      <Header />
-      <div className="w-full h-screen flex flex-col">{routesElement}</div>
-    </AuthProvider>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/log" element={<Log />} />
+        <Route path="/progress" element={<Progress />} />
+      </Routes>
+    </Router>
   );
 }
 
