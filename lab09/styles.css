@@ -1,0 +1,20 @@
+#weather-box {
+    background-color: #FFA500; /* Orange background */
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    margin: auto;
+    text-align: center;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+#weather-box h2 {
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+#weather span {
+    font-size: 48px;
+    display: block; /* Ensure the emoji is centered on its own line */
+}
