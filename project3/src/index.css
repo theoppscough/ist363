@@ -195,9 +195,9 @@ body {
   align-items: center;
   padding: 6rem 1rem;
   background: 
-    url('/project3/public/diana-oborska-eS07Cany2g4-unsplash.jpg') left center / cover no-repeat,
-    url('/project3/public/irina-del-uJQYVRza0VY-unsplash.jpg') center center / cover no-repeat,
-    url('/project3/public/vd-photography-h4XEpzG4Y-I-unsplash.jpg') right center / cover no-repeat;
+    url('../public/pic1.jpg') left center / cover no-repeat,
+    url('../public/pic2.jpg') center center / cover no-repeat,
+    url('../public/pic3.jpg') right center / cover no-repeat;
   background-blend-mode: multiply;
   background-color: rgba(0,0,0,0.3);
 }
@@ -215,6 +215,6 @@ body {
 @media (max-width: 768px) {
   .home-background {
     flex-direction: column;
-    background: url('/project3/public/irina-del-uJQYVRza0VY-unsplash.jpg') center center / cover no-repeat;
+    background: url('../public/pic1.jpg') center center / cover no-repeat;
   }
 }
